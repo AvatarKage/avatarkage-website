@@ -1,2 +1,2 @@
-# avatarkage-website
- Official website of AvatarKage
+# AvatarKage's Website
+AvatarKage is 20-year-old multi-artist and a content creator on many platforms currently focusing on EDM and film production while managing many other smaller projects. He also owns a cross-platform community called 5h4d0w which revolves around arts, games, and music of all kinds. Additionally, Avatar is a professional moderator and have served in over 40 Discord servers as a moderator and/or community administrator including FrediSaal's and NASCAR's official communities.
