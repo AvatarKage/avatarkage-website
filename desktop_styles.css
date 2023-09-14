@@ -17,18 +17,12 @@
   /*///////////////*/
   body {
     display: flex;
+    font-family: 'Jost', sans-serif;
     justify-content: center;
     align-items: center;
+    color: white;
     background-color: #1d1c1c; /* Changed color code to hex format */
     height: 100vh;
     margin: 0;
-  }
-
-  p {
-    color: white;
-    background-color: #1d1c1c; /* Changed color code to hex format */
-    font-size: 36px;
-    font-weight: 900;
-    font-family: 'Jost', sans-serif;
   }
 }
