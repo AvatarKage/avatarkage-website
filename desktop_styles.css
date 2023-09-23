@@ -1,59 +1,117 @@
+/*/————————————————————————————————————————————————————————/*/
+/*/——————————————————[ DESKTOP-FRONTEND ]——————————————————/*/
+/*/————————————————————————————————————————————————————————/*/
 @media screen and (min-width: 769px) {
-  /* Right-align navigation for desktop */
   nav ul {
-    text-align: right;
+      text-align: right;
   }
-  /*///////////*/
-  /* Font Face */
-  /*///////////*/
+
+  /*/————————————————————————————————————————————————————————/*/
+  /*/———————————————————[ EXTERNAL-ASSETS ]——————————————————/*/
+  /*/————————————————————————————————————————————————————————/*/
   @font-face {
     font-family: 'Jost';
     src: url('fonts/jost.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
   }
-  /*///////////////*/
-  /* Page Elements */
-  /*///////////////*/
+
+  /*/————————————————————————————————————————————————————————/*/
+  /*/———————————————————[ ID-ANIMATIONS ]————————————————————/*/
+  /*/————————————————————————————————————————————————————————/*/
+  #logo_text:hover {
+    scale: 1.05;
+  }
+
+  /*/————————————————————————————————————————————————————————/*/
+  /*/—————————————————————[ PAGE-ELEMENTS ]——————————————————/*/
+  /*/————————————————————————————————————————————————————————/*/
   body {
     display: flex;
     font-family: 'Jost', sans-serif;
     justify-content: center;
     align-items: center;
     color: white;
-    background-color: #1d1c1c;
+    background-image: url('media/images/backgrounds/neon_city.jpg');
+    background-size: cover; /* Adjust as needed */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
     margin: 0;
   }
 
+  img {
+    transition: 0.3s ease-in-out;
+  }
+
   .page {
+    position: absolute;
     display: flex;
     height: 100vh;
     width: 100vw;
+    z-index: 0;
   }
 
   .top {
-    position: fixed;
-    background-color: #0e0d0d;
-    top: 0;
+    position: absolute;
+    background-color: #571c3c00;
+    transform-origin: top center;
+    top: 50vh;
     left: 0;
     right: 0;
-    height: 50px;
+    height: 75px;
+    z-index: 2;
   }
   
   .center {
-    position: fixed;
-    background-color: #1d1c1c;
-    top: 325px;
+    position: absolute;
+    top: 90vh;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1;
   }  
   
   .footer {
-    position: fixed;
-    background-color: #0e0d0d;
-    bottom: 0;
+    position: absolute;
+    background-color: #571c3c;
+    bottom: -50vh;
     left: 0;
     right: 0;
     height: 200px;
-  }  
+    z-index: 4;
+  } 
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #1b1f28;
+  }
+
+  ::selection {
+    background-color: #914ad3;
+    color: #ffffff;
+    border-radius: 5px;
+  }
+
+  /*/————————————————————————————————————————————————————————/*/
+  /*/————————————————————[ UI-ELEMENTS ]—————————————————————/*/
+  /*/————————————————————————————————————————————————————————/*/
+  .ui_box {
+    position: relative;
+    background-color: #00000065;
+    border-radius: 5px;
+    height: 75px;
+    width: 75px;
+    transform-origin: center center;
+    transition: 0.3s ease-in-out;
+    z-index: 3;
+  }
 }
