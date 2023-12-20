@@ -34,7 +34,7 @@
     color: white;
     background-color: #1d0824;
     background-image: url('media/images/backgrounds/purple_background.png');
-    background-size: cover; /* Adjust as needed */
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow-x: hidden;
