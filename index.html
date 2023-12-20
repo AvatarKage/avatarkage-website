@@ -30,6 +30,9 @@
 </head>
 <body>
   <div class="page">
+    <div style="position: absolute; z-index: 1; opacity: 0.25; top: 50%; left: -770px; scale: 1.2; transform-origin: center center;">
+      <img id="coa_center" src="media/images/avatarkage/branding/avatarkage_coat_of_arms_transparent_1000_png.png" style="transform-origin: center center;"></img>
+    </div>
 
     <!--————————————————————————————————————————————————————————-->
     <!--————————————————————[ TOP-ELEMENTS ]————————————————————-->
@@ -124,6 +127,16 @@
   
       // Apply parallax effect to the background image
       document.body.style.backgroundPositionY = `-${parallaxValue}px`;
+    });
+  </script>
+  <script>
+    coa_center = document.getElementById('coa_center')
+    document.addEventListener('scroll', () => {
+      const scrollValue = window.scrollY;
+      const parallaxValue = scrollValue * 0.25; // Adjust the multiplier for the desired parallax effect
+  
+      // Apply parallax effect to the background image
+      coa_center.style.top = `${parallaxValue}px`;
     });
   </script>
   
