@@ -48,7 +48,7 @@
     color: white;
     background-color: #1d0824;
     background-image: url('media/images/backgrounds/purple_background.png');
-    background-size: cover;
+    background-size: 125%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow-x: hidden;
@@ -118,7 +118,7 @@
   }
 
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
   }
 
   ::-webkit-scrollbar-thumb {
