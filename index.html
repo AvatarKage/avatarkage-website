@@ -37,6 +37,14 @@
     <!--————————————————————————————————————————————————————————-->
     <!--————————————————————[ TOP-ELEMENTS ]————————————————————-->
     <!--————————————————————————————————————————————————————————-->
+    <div class="banner" id="announcement_banner">
+      <div class="banner_text" id="announcement_banner_text">Next generation website in the works. Have a look around!</div>
+      <div id="banner_close" style="cursor: pointer;">
+          <img src="media/icons/close_icon.png" id="banner_close" style="position: absolute; top: 0px; z-index: 7; right: 0px; scale: 0.15; transform-origin: top right;"></img>
+      </div>
+      <script src="scripts/banner.js"></script>
+    </div>
+    
     <div class="top">
       <img src="media/images/avatarkage/branding/avatarkage_banner_t_512_png.png" style="scale: 36%; left: 50px; top: 50%; transform: translateY(-50%);"></img>
 
@@ -49,68 +57,35 @@
       <div class="menu_text">Films</div>
       <div class="menu_text">Books</div>
       <div class="menu_text">Blog</div>
-      <div class="menu_text" id="menu_text_selected" style="font-family: 'Jost-Bold'; color: #ffffff; transform: translateY(0px)scale(1.05);">Home</div>
+      <div class="menu_text" id="menu_text_selected" style="font-family: 'Jost-Bold'; color: #ffffff; transform: translateY(0px)scale(1.05);">Home
+        <script src="scripts/menu_easteregg.js"></script>
+      </div>
 
       <div class="circle" style="right: 60px; top: 12px;">
         <img src="media/images/avatarkage/branding/avatarkage_logo_512_png.png" style="height: 36px; border-radius: 100px;"></img>
       </div>
-
-      <script>
-        const menuTextSelected = document.getElementById('menu_text_selected');
-        let clickCount = 0;
-        let oldText = menuTextSelected.textContent
-        let msg = ""
-      
-        menuTextSelected.addEventListener('click', () => {
-          clickCount++;
-          menuTextSelected.style.transform = "scale(2)";
-          if (clickCount >= 10) {
-            msg = "- Bro.."
-          }
-          if (clickCount >= 25) {
-            msg = "- You ok??"
-          }
-          if (clickCount >= 50) {
-            msg = "- DUDE STOP!!"
-          }
-          if (clickCount >= 80) {
-            msg = "- Calling admins"
-            setTimeout(() => {
-              document.body.innerHTML = '<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; font-family: \'Jost-Medium\'; font-size: 28px;"><p>You\'ve been banned. Refresh to be unbanned.</p></div>';
-            return;
-          }, 5000);
-          }
-          const newText = `${oldText} ${clickCount} ${msg}`;
-      
-          // Add a class to trigger the animation
-          menuTextSelected.classList.add('text-change-animation');
-
-          // Updates the text
-          menuTextSelected.textContent = newText;
-          menuTextSelected.classList.remove('text-change-animation');
-
-          setTimeout(() => {
-            menuTextSelected.style.transform = "scale(1.05)";
-          }, 80);
-        });
-      </script>            
-      
     </div>
 
     <!--————————————————————————————————————————————————————————-->
     <!--——————————————————[ CENTER-ELEMENTS ]———————————————————-->
     <!--————————————————————————————————————————————————————————-->
-    <div class="left"><!--ad-->
+    <div class="left" id="left"><!--ad-->
       <div class="ui_box_ad" style="top: 120px;"></div>
     </div>
-    <div class="right"><!--ad-->
+    <div class="right" id="right"><!--ad-->
       <div class="ui_box_ad" style="top: 120px;"></div>
     </div>
+    <script src="scripts/ads_parallax.js"></script>
 
     <div class="center">
-      <div class="ui_box_rectangle" style="top: 120px;"></div>
-      <div class="ui_box_rectangle" style="top: 720px;"></div>
-      <div class="ui_box_rectangle" style="top: 1320px;"></div>
+      <div class="ui_box_rectangle" id="section_1" style="top: 120px;"></div>
+      <p style="top: 710px;">AvatarKage is a rising digital creator and professional community manager. He is active in electronic music and sci-fi/fantasy film production among many other things such as video game development and business start ups. He strives for global impact in hopes his content can help make the world a better place.</p>
+
+      <div class="ui_box_rectangle" id="section_2" style="top: 720px; right: 1500px;"></div>
+
+
+      <div class="ui_box_rectangle" id="section_3" style="top: 1320px; right: 1500px;"></div>
+      <script src="scripts/section_slide.js"></script>
     </div>
 
     <!--————————————————————————————————————————————————————————-->
@@ -119,26 +94,8 @@
     <div class="footer" style="top: 2300px;"></div>
 
   </div>
-
-  <script>
-    document.addEventListener('scroll', () => {
-      const scrollValue = window.scrollY;
-      const parallaxValue = scrollValue * 0.15; // Adjust the multiplier for the desired parallax effect
-  
-      // Apply parallax effect to the background image
-      document.body.style.backgroundPositionY = `-${parallaxValue}px`;
-    });
-  </script>
-  <script>
-    coa_center = document.getElementById('coa_center')
-    document.addEventListener('scroll', () => {
-      const scrollValue = window.scrollY;
-      const parallaxValue = scrollValue * 0.25; // Adjust the multiplier for the desired parallax effect
-  
-      // Apply parallax effect to the background image
-      coa_center.style.top = `${parallaxValue}px`;
-    });
-  </script>
+  <script src="scripts/background_parallax.js"></script>
+  <script src="scripts/coa_parallax.js"></script>
   
 </body>
 </html>

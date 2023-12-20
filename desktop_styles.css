@@ -69,16 +69,31 @@
     z-index: 0;
   }
 
+  .banner {
+    position: fixed;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #8622a8;
+    transform-origin: top center;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    transition: all 0.4s;
+    z-index: 3;
+  }
+
   .top {
     position: fixed;
     display: flex;
     flex-direction: row-reverse;
     background-color: #3a1b44;
     transform-origin: top center;
-    top: 0;
+    top: 40px;
     left: 0;
     right: 0;
     height: 60px;
+    transition: all 0.4s;
     box-shadow: 0px 2px 0px #1d0824;
     z-index: 2;
   }
@@ -149,6 +164,7 @@
     right: 50%;
     transform: translateX(50%);
     transform-origin: center center;
+    transition: all 0.4s;
     z-index: 3;
   }
 
@@ -177,6 +193,22 @@
   /*/————————————————————————————————————————————————————————/*/
   /*/———————————————————[ TEXT-ELEMENTS ]————————————————————/*/
   /*/————————————————————————————————————————————————————————/*/
+  p {
+    position: absolute;
+    display: flexbox;
+    font-family: 'Jost-Medium';
+    color: #cccccc;
+    font-size: 20px;
+    top: 65%;
+    left: 50%;
+    height: 300px;
+    width: 1000px;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    transition: all 0.4s;
+    z-index: 5;
+  }
+
   .menu_text {
     display: inline-block;
     position: relative;
@@ -195,6 +227,21 @@
 
   .menu_text:hover {
     color: #ffffff;
-    transform: translateY(-5px)scale(1.05);
+  }
+
+  .banner_text {
+    position: absolute;
+    display: block;
+    font-family: 'Jost-Medium';
+    color: #ffffff;
+    font-size: 20px;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    transition: all 0.4s;
+    z-index: 5;
   }
 }
