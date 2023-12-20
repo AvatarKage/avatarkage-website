@@ -1,7 +1,7 @@
 /*/————————————————————————————————————————————————————————/*/
 /*/——————————————————[ DESKTOP-FRONTEND ]——————————————————/*/
 /*/————————————————————————————————————————————————————————/*/
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1600px) {
   nav ul {
       text-align: right;
   }
@@ -10,8 +10,22 @@
   /*/———————————————————[ EXTERNAL-ASSETS ]——————————————————/*/
   /*/————————————————————————————————————————————————————————/*/
   @font-face {
-    font-family: 'Jost';
-    src: url('fonts/jost.ttf') format('truetype');
+    font-family: 'Jost-Regular';
+    src: url('fonts/Jost-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Jost-Medium';
+    src: url('fonts/Jost-Medium.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Jost-Bold';
+    src: url('fonts/Jost-Bold.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
   }
@@ -28,7 +42,7 @@
   /*/————————————————————————————————————————————————————————/*/
   body {
     display: flex;
-    font-family: 'Jost', sans-serif;
+    font-family: 'Jost-Regular';
     justify-content: center;
     align-items: center;
     color: white;
@@ -42,7 +56,9 @@
   }
 
   img {
-    transition: 0.3s ease-in-out;
+    position: absolute;
+    transform-origin: top left;
+    z-index: 6;
   }
 
   .page {
@@ -55,12 +71,14 @@
 
   .top {
     position: fixed;
+    display: flex;
+    flex-direction: row-reverse;
     background-color: #3a1b44;
     transform-origin: top center;
-    top: 0%;
+    top: 0;
     left: 0;
     right: 0;
-    height: 50px;
+    height: 60px;
     box-shadow: 0px 2px 0px #1d0824;
     z-index: 2;
   }
@@ -92,7 +110,7 @@
     background-color: #3a1b44;
     bottom: 0;
     right: 0;
-    height: 560px;
+    height: 500px;
     width: 100%;
     transform-origin: bottom center;
     box-shadow: 0px -2px 0px #1d0824;
@@ -114,7 +132,7 @@
   }
 
   ::selection {
-    background-color: #914ad3;
+    background-color: #914ad300;
     color: #ffffff;
     border-radius: 5px;
   }
@@ -131,7 +149,6 @@
     right: 50%;
     transform: translateX(50%);
     transform-origin: center center;
-    transition: 0.3s ease-in-out;
     z-index: 3;
   }
 
@@ -144,7 +161,40 @@
     right: 50%;
     transform: translateX(50%);
     transform-origin: center center;
-    transition: 0.3s ease-in-out;
     z-index: 3;
+  }
+
+  .circle {
+    position: absolute;
+    background-color: #250b2d;
+    border-radius: 100px;
+    height: 36px;
+    width: 36px;
+    transform-origin: center center;
+    z-index: 6;
+  }
+
+  /*/————————————————————————————————————————————————————————/*/
+  /*/———————————————————[ TEXT-ELEMENTS ]————————————————————/*/
+  /*/————————————————————————————————————————————————————————/*/
+  .menu_text {
+    display: inline-block;
+    position: relative;
+    font-family: 'Jost-Medium';
+    color: #cccccc;
+    font-size: 18px;
+    top: 30%;
+    right: 120px;
+    height: 20px;
+    padding-left: 20px;
+    cursor: pointer;
+    transform-origin: center center;
+    transition: all 0.4s;
+    z-index: 5;
+  }
+
+  .menu_text:hover {
+    color: #ffffff;
+    transform: translateY(-5px)scale(1.05);
   }
 }

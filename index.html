@@ -34,22 +34,77 @@
     <!--————————————————————————————————————————————————————————-->
     <!--————————————————————[ TOP-ELEMENTS ]————————————————————-->
     <!--————————————————————————————————————————————————————————-->
-    <div class="top"></div>
+    <div class="top">
+      <img src="media/images/avatarkage/branding/avatarkage_banner_t_512_png.png" style="scale: 36%; left: 50px; top: 50%; transform: translateY(-50%);"></img>
+
+      <div class="menu_text">About</div>
+      <div class="menu_text">Shop</div>
+      <div class="menu_text">Projects</div>
+      <div class="menu_text">Podcast</div>
+      <div class="menu_text">Music</div>
+      <div class="menu_text">Games</div>
+      <div class="menu_text">Films</div>
+      <div class="menu_text">Books</div>
+      <div class="menu_text">Blog</div>
+      <div class="menu_text" id="menu_text_selected" style="font-family: 'Jost-Bold'; color: #ffffff; transform: translateY(0px)scale(1.05);">Home</div>
+
+      <div class="circle" style="right: 60px; top: 12px;">
+        <img src="media/images/avatarkage/branding/avatarkage_logo_512_png.png" style="height: 36px; border-radius: 100px;"></img>
+      </div>
+
+      <script>
+        const menuTextSelected = document.getElementById('menu_text_selected');
+        let clickCount = 0;
+        let oldText = menuTextSelected.textContent
+        let msg = ""
+      
+        menuTextSelected.addEventListener('click', () => {
+          clickCount++;
+          if (clickCount >= 10) {
+            msg = "- Bro.."
+          }
+          if (clickCount >= 25) {
+            msg = "- You ok??"
+          }
+          if (clickCount >= 50) {
+            msg = "- DUDE STOP!!"
+          }
+          if (clickCount >= 95) {
+            msg = "- Calling Admins"
+          }
+          if (clickCount >= 101) {
+            document.body.innerHTML = '<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; font-family: \'Jost-Medium\'; font-size: 28px;"><p>You\'ve been banned. Refresh to be unbanned.</p></div>';
+            return;
+          }
+          const newText = `${oldText} ${clickCount} ${msg}`;
+      
+          // Add a class to trigger the animation
+          menuTextSelected.classList.add('text-change-animation');
+      
+          // Update the text after the animation completes
+          setTimeout(() => {
+            menuTextSelected.textContent = newText;
+            menuTextSelected.classList.remove('text-change-animation');
+          }, 1); // Adjust the duration based on your preference
+        });
+      </script>            
+      
+    </div>
 
     <!--————————————————————————————————————————————————————————-->
     <!--——————————————————[ CENTER-ELEMENTS ]———————————————————-->
     <!--————————————————————————————————————————————————————————-->
     <div class="left"><!--ad-->
-      <div class="ui_box_ad" style="top: 100px;"></div>
+      <div class="ui_box_ad" style="top: 120px;"></div>
     </div>
     <div class="right"><!--ad-->
-      <div class="ui_box_ad" style="top: 100px;"></div>
+      <div class="ui_box_ad" style="top: 120px;"></div>
     </div>
 
     <div class="center">
-      <div class="ui_box_rectangle" style="top: 100px;"></div>
-      <div class="ui_box_rectangle" style="top: 700px;"></div>
-      <div class="ui_box_rectangle" style="top: 1300px;"></div>
+      <div class="ui_box_rectangle" style="top: 120px;"></div>
+      <div class="ui_box_rectangle" style="top: 720px;"></div>
+      <div class="ui_box_rectangle" style="top: 1320px;"></div>
     </div>
 
     <!--————————————————————————————————————————————————————————-->
