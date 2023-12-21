@@ -61,6 +61,13 @@
     z-index: 6;
   }
 
+  canvas {
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+
   .page {
     position: absolute;
     display: flex;
@@ -314,4 +321,8 @@
     transition: all 0.4s;
     z-index: 5;
   }
+
+  /*/————————————————————————————————————————————————————————/*/
+  /*/——————————————————[ SPECIAL-ELEMENTS ]——————————————————/*/
+  /*/————————————————————————————————————————————————————————/*/
 }
