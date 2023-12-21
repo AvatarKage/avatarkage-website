@@ -122,6 +122,9 @@
   
   .footer {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #3a1b44;
     bottom: 0;
     right: 0;
@@ -197,10 +200,17 @@
     left: calc(50% - 178px);
     transform: translate(-50%);
     transform-origin: center center;
-    height: 40px;
-    width: 40px;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    padding-left: 15px;
+    transition: all 0.1s;
     z-index: 3;
-}
+  }
+
+  .social:hover {
+    scale: 1.05;
+  }
 
   /*/————————————————————————————————————————————————————————/*/
   /*/———————————————————[ TEXT-ELEMENTS ]————————————————————/*/
@@ -217,8 +227,16 @@
     width: 1000px;
     transform: translate(-50%,-50%);
     text-align: center;
-    transition: all 0.4s;
     z-index: 5;
+  }
+
+  a {
+    color: #cccccc;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #ffffff;
   }
 
   .menu_text {
@@ -230,15 +248,55 @@
     top: 30%;
     right: 120px;
     height: 20px;
+    width: fit-content;
     padding-left: 20px;
     cursor: pointer;
     transform-origin: center center;
-    transition: all 0.4s;
+    transition: all 0.1s;
     z-index: 5;
   }
 
   .menu_text:hover {
     color: #ffffff;
+  }
+
+  .footer_menu_text {
+    font-family: 'Jost-Medium';
+    color: #cccccc;
+    font-size: 20px;
+    height: 20px;
+    width: fit-content;
+    padding-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.1s;
+  }
+
+  .footer_menu_text:hover {
+      color: #ffffff;
+  }
+
+  .left_f_menu {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    position: absolute;
+  }
+
+  .left_r_menu {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: absolute;
+  }
+
+  .left_f_menu {
+      left: 160px;
+      top: 160px;
+  }
+
+  .left_r_menu {
+      right: 160px;
+      top: 160px;
   }
 
   .banner_text {
