@@ -164,7 +164,6 @@
     right: 50%;
     transform: translateX(50%);
     transform-origin: center center;
-    transition: all 0.4s;
     z-index: 3;
   }
 
@@ -189,6 +188,19 @@
     transform-origin: center center;
     z-index: 6;
   }
+
+  .social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: calc(50% - 178px);
+    transform: translate(-50%);
+    transform-origin: center center;
+    height: 40px;
+    width: 40px;
+    z-index: 3;
+}
 
   /*/————————————————————————————————————————————————————————/*/
   /*/———————————————————[ TEXT-ELEMENTS ]————————————————————/*/

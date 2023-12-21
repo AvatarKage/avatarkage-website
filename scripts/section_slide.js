@@ -4,16 +4,11 @@ var section_3 = document.getElementById("section_3");
 window.addEventListener("scroll", function() {
     var scrollValue = window.scrollY;
 
-    if (scrollValue <= 100) {
-        section_2.style.right = "1500px";
-    }
-    if (scrollValue >= 100) {
-        section_2.style.right = "0px";
-    }
-    if (scrollValue <= 800) {
-        section_3.style.right = "1500px";
-    }
-    if (scrollValue >= 800) {
-        section_3.style.right = "0px";
-    }
+    // Calculate the new right position based on the scroll value
+    var section2Right = Math.max(0, 400 - scrollValue);
+    var section3Right = Math.max(0, 1000 - scrollValue);
+
+    // Set the new right positions for the sections
+    section_2.style.right = section2Right * 4 + "px";
+    section_3.style.right = section3Right * 4 + "px";
 });
