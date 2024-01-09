@@ -4,8 +4,8 @@ right = document.getElementById('right');
 document.addEventListener('scroll', () => {
     const scrollValue = window.scrollY;
     const minScroll = 0;
-    const maxScroll1 = 1000;
-    const maxScroll2 = 1100;
+    const maxScroll1 = 1050;
+    const maxScroll2 = 1150;
 
     let opacity;
 

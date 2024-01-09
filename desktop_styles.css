@@ -100,30 +100,33 @@
     left: 0;
     right: 0;
     height: 60px;
-    transition: all 0.4s;
+    transition: top 0.4s;
     box-shadow: 0px 2px 0px #1d0824;
     z-index: 2;
   }
 
   .left {
     position: fixed;
-    top: 0px;
+    top: 40px;
     left: 131px;
+    transition: top 0.4s;
     z-index: 3;
   }  
   
   .center {
     position: absolute;
-    top: 50%;
+    top: calc(50% + 40px);
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: top 0.4s;
     z-index: 1;
   }
 
   .right {
     position: fixed;
-    top: 0px;
+    top: 40px;
     right: 131px;
+    transition: top 0.4s;
     z-index: 3;
   }  
   
@@ -164,16 +167,17 @@
 
   /*/————————————————————————————————————————————————————————/*/
   /*/————————————————————[ UI-ELEMENTS ]—————————————————————/*/
-  /*/————————————————————————————————————————————————————————/*/
+  /*/————————————————————————————————————————32————————————————/*/
   .ui_box_rectangle {
     position: absolute;
     background-color: #3a1b44;
     border-radius: 16px;
-    height: 450px;
-    width: 1076px;
+    height: 428px;
+    width: 1068px;
     right: 50%;
     transform: translateX(50%);
     transform-origin: center center;
+    overflow: hidden;
     z-index: 3;
   }
 
@@ -186,16 +190,18 @@
     right: 50%;
     transform: translateX(50%);
     transform-origin: center center;
+    overflow: hidden;
     z-index: 3;
   }
 
   .circle {
     position: absolute;
-    background-color: #250b2d;
+    background-color: #250b2d35;
     border-radius: 100px;
     height: 36px;
     width: 36px;
     transform-origin: center center;
+    transition: scale 0.1s;
     z-index: 6;
   }
 
@@ -211,11 +217,15 @@
     height: 20px;
     width: 20px;
     padding-left: 15px;
-    transition: all 0.1s;
+    transition: scale 0.1s;
     z-index: 3;
   }
 
   .social:hover {
+    scale: 1.05;
+  }
+
+  .circle:hover {
     scale: 1.05;
   }
 
