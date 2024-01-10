@@ -104,6 +104,7 @@
         transition: top 0.4s;
         box-shadow: 0px 2px 0px #1d0824;
         z-index: 2;
+        scale: 0.2;
     }
 
     .left {
@@ -122,7 +123,7 @@
         transform: translate(-50%, -50%);
         transition: top 0.4s;
         z-index: 1;
-        scale: 0.5;
+        scale: 0.2;
     }
 
     .right {
@@ -147,6 +148,7 @@
         transform-origin: bottom center;
         box-shadow: 0px -2px 0px #1d0824;
         z-index: 4;
+        scale: 0.2;
     }
 
     ::-webkit-scrollbar {
