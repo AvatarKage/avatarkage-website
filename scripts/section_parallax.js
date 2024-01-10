@@ -36,17 +36,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     } else {
-      const minScroll2a = 50;
-      const maxScroll2a = 100;
+      const minScroll2a = 10;
+      const maxScroll2a = 25;
   
-      const minScroll3a = 250;
-      const maxScroll3a = 300;
+      const minScroll3a = 35;
+      const maxScroll3a = 50;
       if (scrollValue >= minScroll2a && scrollValue <= maxScroll2a) {
         const opacity2a = Math.min(1, (scrollValue - minScroll2a) / (maxScroll2a - minScroll2a));
         section_2.style.opacity = opacity2a;
 
         if (opacity2a >= 1) {
-          fadedIn2 = true;
+          fadedIn2 = false;
         }
       }
 
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         section_3.style.opacity = opacity3a;
 
         if (opacity3a >= 1) {
-          fadedIn3 = true;
+          fadedIn3 = false;
         }
       };
     } 
