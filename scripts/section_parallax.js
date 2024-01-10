@@ -36,11 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     } else {
-      const minScroll2a = 100;
-      const maxScroll2a = 200;
+      const minScroll2a = 50;
+      const maxScroll2a = 100;
   
-      const minScroll3a = 600;
-      const maxScroll3a = 700;
+      const minScroll3a = 250;
+      const maxScroll3a = 300;
       if (scrollValue >= minScroll2a && scrollValue <= maxScroll2a) {
         const opacity2a = Math.min(1, (scrollValue - minScroll2a) / (maxScroll2a - minScroll2a));
         section_2.style.opacity = opacity2a;
