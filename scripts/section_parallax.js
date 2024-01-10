@@ -5,6 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
   let fadedIn2 = false;
   let fadedIn3 = false;
 
+  if (window.innerWidth > 1000) {
+    section_2.style.opacity = 1;
+    section_3.style.opacity = 1;
+  }
+
   document.addEventListener('scroll', () => {
     const scrollValue = window.scrollY;
     const minScroll2a = 200;
@@ -14,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const maxScroll3a = 800;
 
     // Check if the screen width is less than 768 pixels (adjust the threshold as needed)
-    const isMobile = window.innerWidth < 768;
+    const isMobile = window.innerWidth < 1000;
 
     if (!isMobile) {
       // Desktop version
@@ -36,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     } else {
-      section_3.style.opacity = 1;
+      section_2.style.opacity = 1;
       section_3.style.opacity = 1;
     } 
   });
