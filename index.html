@@ -86,24 +86,65 @@
     <script src="scripts/ads_parallax.js"></script>
 
     <div class="center">
+
       <div class="ui_box_rectangle" id="section_1" style="top: 120px;">
-        <div class="circle" style="left: 12px; top: 50%; transform: translateY(-50%);">
+        <div class="circle" id="section_1_right" style="left: 12px; top: 50%; transform: translateY(-50%); background-color: #250b2d35;">
           <img src="media/icons/right_icon.png" style="height: 24px; width: 24px; transform: translate(-50%, -50%); top: 50%; left: 50%;"></img>
         </div>
-        <div class="circle" style="right: 12px; top: 50%; transform: translateY(-50%);">
+        <div class="circle" id="section_1_left" style="right: 12px; top: 50%; transform: translateY(-50%); background-color: #250b2d35;">
           <img src="media/icons/left_icon.png" style="height: 24px; width: 24px; transform: translate(-50%, -50%); top: 50%; left: 50%;"></img>
         </div>
 
-        <a href="https://avatarka.ge/join" target="_blank"><img id="section_1_image" src="media/images/promo/slider/discord_server_launch.jpg" style="max-height: 100%; transform: translateX(-50%); left: 50%; z-index: 5;"></img></a>
+        <a id="section_1_link" href="https://avatarka.ge/join" target="_blank">
+          <img id="section_1_image" src="media/images/promo/slider/discord_server_launch.jpg" style="max-height: 100%; transform: translateX(-50%); left: 50%; z-index: 5;"></img>
+        </a>
       </div>
       <p id="section_1_text" style="top: 692px;">After over 3 years of frequent development cycles, brand updates, and community functionality revamps, the Discord server is finally officially released. Will you join us?</p>
-      
+      <script src="scripts/section_1_slider.js"></script>
+
 
       <p style="top: 692px; opacity: 0;"><span style="color: #ffffff;">AvatarKage</span> is a rising <span style="color: #ffffff;">digital creator</span> and professional <span style="color: #ffffff;">community manager</span>. He is active in <span style="color: #ffffff;">electronic music</span> and <span style="color: #ffffff;">sci-fi/fantasy film production</span> among many other things such as <span style="color: #ffffff;">video game development</span> and <span style="color: #ffffff;">business start ups</span>.</p>
+      
 
-      <div class="ui_box_rectangle" id="section_2" style="top: 702px; right: 1500px;"></div>
+      <div class="ui_box_rectangle" id="section_2" style="top: 702px; right: 1500px; display: grid; grid-template-columns: repeat(auto-fill, minmax(464px, 1fr)); gap: 0px;">
+        <div class="ui_group_box">
+          <div class="circle" id="section_1_right" style="left: 80px; top: 80px;"></div>
+          <p style="position: absolute; left: 240px; top: 196px; font-size: 30px; font-family: Jost-Bold; color: #ffffff;">App Developer</p>
+          <p style="position: absolute; left: 256px; top: 260px; font-size: 16px; font-family: Jost-Regular; color: #cccccc; width: 350px; text-align: left;">Founder and developer of OpenProfile 5, the ultimate app for writers and Urban Legends, a new game coming soon!</p>
+        </div>
+      
+        <div class="ui_group_box">
+          <div class="circle" id="section_1_right" style="left: 80px; top: 80px;"></div>
+          <p style="position: absolute; left: 240px; top: 196px; font-size: 30px; font-family: Jost-Bold; color: #ffffff;">Media Producer</p>
+          <p style="position: absolute; left: 256px; top: 260px; font-size: 16px; font-family: Jost-Regular; color: #cccccc; width: 350px; text-align: left;">Music and film producer known for working on Portal Quest, the oldest and largest full length feature unofficial Minecraft animated film.</p>
+        </div>
+      
+        <div class="ui_group_box">
+          <div class="circle" id="section_1_right" style="left: 80px; top: 0px;"></div>
+          <p style="position: absolute; left: 234px; top: 118px; font-size: 30px; font-family: Jost-Bold; color: #ffffff;">Original Writer</p>
+          <p style="position: absolute; left: 256px; top: 182px; font-size: 16px; font-family: Jost-Regular; color: #cccccc; width: 350px; text-align: left;">Fiction, fantasy, and sci-fi writer for many projects including, the Portal Quest Project, J9's Dragonights, 5h4d0w, and many other projects.</p>
+        </div>
+      
+        <div class="ui_group_box">
+          <div class="circle" id="section_1_right" style="left: 80px; top: 0px;"></div>
+          <p style="position: absolute; left: 272px; top: 118px; font-size: 30px; font-family: Jost-Bold; color: #ffffff;">Community Manager</p>
+          <p style="position: absolute; left: 256px; top: 182px; font-size: 16px; font-family: Jost-Regular; color: #cccccc; width: 350px; text-align: left;">Professional community manager and moderator with relations in over 40 communities including corperate ones.</p>
+        </div>
+      </div>      
 
-      <div class="ui_box_rectangle" id="section_3" style="top: 1284px; right: 1500px;"></div>
+
+      <div class="ui_box_rectangle" id="section_3" style="top: 1284px; right: 1500px;">
+        <p style="position: absolute; left: 50%; transform: translate(-50%); top: 0px; font-size: 30px; font-family: Jost-Bold; color: #ffffff;">Brands I've worked with</p>
+        <a href="https://www.nascar.com" target="_blank">
+          <img src="media/images/brands/logo_nascar.png" style="width: 300px; top: 68px; left: 40px;"></img>
+        </a>
+        <a href="https://www.blacklitedistrict.net" target="_blank">
+          <img src="media/images/brands/logo_blacklite_district.png" style="width: 300px; top: 68px; left: 380px;"></img>
+        </a>
+        <a href="https://www.creatoryx.com" target="_blank">
+          <img src="media/images/brands/logo_creatoryx.png" style="width: 300px; top: 68px; left: 728px;"></img>
+        </a>
+      </div>
       <script src="scripts/section_slide.js"></script>
     </div>
 

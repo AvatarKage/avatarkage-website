@@ -181,6 +181,20 @@
     z-index: 3;
   }
 
+  .ui_group_box {
+    position: relative;
+    display: grid;
+    background-color:#ffffff00;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    height: 216px;
+    width: 534px;
+    padding-top: 40px;
+    padding-left: 40px;
+    z-index: 4;
+  }
+
   .ui_box_ad {
     position: absolute;
     background-color: #3a1b44;
@@ -191,12 +205,13 @@
     transform: translateX(50%);
     transform-origin: center center;
     overflow: hidden;
+    box-shadow: 0px 0px 0px 2px #1d0824;
     z-index: 3;
   }
 
   .circle {
     position: absolute;
-    background-color: #250b2d35;
+    background-color: #250b2d;
     border-radius: 100px;
     height: 36px;
     width: 36px;
