@@ -178,6 +178,7 @@
     transform: translateX(50%);
     transform-origin: center center;
     overflow: hidden;
+    transition: opacity 0.4s;
     z-index: 3;
   }
 
