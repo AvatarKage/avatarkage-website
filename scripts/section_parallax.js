@@ -19,9 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const maxScroll3a = 800;
 
     // Check if the screen width is less than 768 pixels (adjust the threshold as needed)
-    const isMobile = window.innerWidth < 1000;
+    const desktop = window.innerWidth < 700;
 
-    if (!isMobile) {
+    if (desktop) {
       // Desktop version
       if (scrollValue >= minScroll2a && scrollValue <= maxScroll2a) {
         const opacity2a = Math.min(1, (scrollValue - minScroll2a) / (maxScroll2a - minScroll2a));
