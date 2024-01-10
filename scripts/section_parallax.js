@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let fadedIn2 = false;
   let fadedIn3 = false;
 
-  if (window.innerWidth > 1000) {
+  if (window.innerWidth > 768) {
     section_2.style.opacity = 1;
     section_3.style.opacity = 1;
   }
