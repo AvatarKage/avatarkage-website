@@ -36,28 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     } else {
-      const minScroll2a = 10;
-      const maxScroll2a = 25;
-  
-      const minScroll3a = 35;
-      const maxScroll3a = 50;
-      if (scrollValue >= minScroll2a && scrollValue <= maxScroll2a) {
-        const opacity2a = Math.min(1, (scrollValue - minScroll2a) / (maxScroll2a - minScroll2a));
-        section_2.style.opacity = opacity2a;
-
-        if (opacity2a >= 1) {
-          fadedIn2 = false;
-        }
-      }
-
-      if (scrollValue >= minScroll3a && scrollValue <= maxScroll3a) {
-        const opacity3a = Math.min(1, (scrollValue - minScroll3a) / (maxScroll3a - minScroll3a));
-        section_3.style.opacity = opacity3a;
-
-        if (opacity3a >= 1) {
-          fadedIn3 = false;
-        }
-      };
+      section_3.style.opacity = 1;
+      section_3.style.opacity = 1;
     } 
   });
 });
