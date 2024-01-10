@@ -241,6 +241,7 @@
         padding-left: 15px;
         transition: scale 0.1s;
         z-index: 3;
+        scale: 0.8;
     }
 
     .social:hover {
@@ -354,6 +355,7 @@
         text-align: center;
         transition: all 0.4s;
         z-index: 5;
+        scale: 0.5;
     }
 
     /*/————————————————————————————————————————————————————————/*/
